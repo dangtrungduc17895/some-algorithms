@@ -1,0 +1,14 @@
+n = 1234
+
+def reverseInt(n):
+	result = 0
+	while n!=0:
+		tail = n%10
+		newResult = result*10 + tail
+		if (newResult-tail)//10 !=result:
+			return 0
+		result = newResult
+		n = n//10
+	return result
+
+print(reverseInt(n))
