@@ -1,0 +1,14 @@
+//Get new list   
+ public List<String> getNewList(String time, List<String> oldList) {
+        List<String> newList = new ArrayList<>();
+        List<String> List = someMap.get(time);
+        if List == null) {
+            return newList;
+        }
+        newList = List.stream().filter(e -> !oldList.contains(e)).collect(Collectors.toList());
+        return newList;
+    }
+
+//Get list random with limit elements from the other list
+        newBuzzIds = IntStream.generate(() -> Utils.randomInt(finalNewBuzzIds.size())).
+                distinct().limit(take).mapToObj(finalNewBuzzIds::get).collect(Collectors.toList());
