@@ -1,0 +1,5 @@
+import com.fasterxml.jackson.databind.ObjectMapper; 
+import com.fasterxml.jackson.databind.ObjectWriter; 
+
+ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
+String json = ow.writeValueAsString(object);
